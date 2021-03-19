@@ -1,0 +1,32 @@
+[package]
+name = "proc_hacks"
+version = "0.1.0"
+authors = ["Maan2003 <manmeetmann2003@gmail.com>"]
+edition = "2018"
+
+[lib]
+proc_macro = true
+
+[dependencies]
+stdx = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+flycheck = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+ide = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+ide_db = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+profile = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+project_model = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+syntax = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+text_edit = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+vfs = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+vfs-notify = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+cfg = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+toolchain = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+hir = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+hir_def = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+hir_ty = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+tt = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+proc_macro_srv = { git = "https://github.com/rust-analyzer/rust-analyzer", rev = "d704750" }
+crossbeam-channel = "0.5.0"
+
+[profile.release.build-override]
+opt-level = 3
+codegen-units = 1
